@@ -1,0 +1,164 @@
+{% extends 'includes/base.html' %}
+
+{% block css%}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+{% load static %}
+<link rel="stylesheet" href=" {% static 'css/project-manager.css' %}">
+{% endblock%}
+
+{% block main %}
+    {% with referer=request.META.HTTP_REFERER %}
+		{#TODO. IMPLEMTENTAR QUE SOLO SAQUE LA ALERTA DE SALUDO 1 VEZ#}
+		{% if '/login/' in request.META.HTTP_REFERER %}
+			<div id="alert" class="alert alert-dismissable alert-success" role="alert">
+					<button type="button" class="close" data-dismiss="alert"aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+			  Welcome back <strong>{{user}}</strong>!
+			</div>
+		{% endif %}
+	{% endwith %}
+    <div class="jumbo-header">
+		<div class="container-local">
+		<h1>Xcalibur Project Manager</h1>
+		<p>Keeping track of proposals and projects has never been easier.</p>
+		</div>
+	</div>
+    <!--<div class="col-md-12" style="padding-bottom: 7%;">
+		<a href='/create/' class="btn btn-primary" style="float: right;">Create proposal</a>
+	</div>-->
+{% endblock %}
+
+{% block active %}
+   <!-- <ul class="nav nav-tabs  nav-justified">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#active">Active</a>
+		</li>
+		<li class="nav-item  nav-justified">
+			<a class="nav-link signed" data-toggle="tab" href="#signed">Signed</a>
+		</li>
+		<li class="nav-item  nav-justified">
+			<a class="nav-link rejected" data-toggle="tab" href="#rejected">Rejected</a>
+		</li>
+	</ul>-->
+<div class="tab-content">
+		<div id="active" class="container tab-pane active">
+			<a href='/create/' class="btn btn-primary" style="float: right;">Create proposal</a>
+			<div class="table-responsive" style="text-align:left; padding-top: 3%;" >
+
+				<table id="active_table" class="table table-hover table-sm display compact">
+				  <thead class="thead-custom">
+					<tr>
+					  <th scope="col">Title</th>
+					  <th scope="col">Country</th>
+					  <th scope="col">Client</th>
+					  <!--<th scope="col">Budget</th>-->
+					  <th scope="col">Responsible</th>
+
+					</tr>
+				  </thead>
+				  <tbody>
+					{% for proposal in act_proposallist %}
+						<tr onclick="window.location='/proposal/{{proposal.id}}/'">
+							<th scope="row">{{ proposal.title }}</th>
+							<td>{{ proposal.get_country_display }}</td>
+							<td>{{  proposal.client_name.client_abbrev}}</td>
+							<!--<td>{{ proposal.budget }}</td>-->
+							<td>{{ proposal.responsible }}</td>
+						</tr>
+					{% endfor %}
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	{% comment %}
+	<!--
+		<div id="signed" class="container tab-pane fade">
+			<div class="table-responsive" style="text-align:left;padding-top: 3%;">
+				<table id="signed_table" class="table table-hover table-sm">
+				  <thead class="thead-custom">
+					<tr>
+					  <th scope="col">Client</th>
+					  <th scope="col">Country</th>
+					  <th scope="col">Title</th>
+					  <th scope="col">Budget</th>
+					  <th scope="col">Responsible</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					{% for proposal in sig_proposallist %}
+						<tr onclick="window.location='/proposal/{{proposal.id}}/'">
+							<th scope="row">{{ proposal.title  }}</th>
+							<td>{{ proposal.get_country_display }}</td>
+							<td>{{ proposal.client_name.client_abbrev }}</td>
+							<td>{{ proposal.budget }}</td>
+							<td>{{ proposal.responsible }}</td>
+
+						</tr>
+					{% endfor %}
+				  </tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="rejected" class="container tab-pane fade">
+			<div class="table-responsive" style="text-align:left;padding-top: 3%;">
+				<table id="rejected_table" class="table table-hover table-sm">
+				  <thead class="thead-custom">
+					<tr>
+					  <th scope="col">Client</th>
+					  <th scope="col">Country</th>
+					  <th scope="col">Title</th>
+					  <th scope="col">Budget</th>
+					  <th scope="col">Responsible</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					{% for proposal in rej_proposallist %}
+						<tr onclick="window.location='/proposal/{{proposal.id}}/'">
+							<th scope="row">{{ proposal.client_name.client_abbrev }}</th>
+							<td>{{ proposal.get_country_display }}</td>
+							<td>{{ proposal.title }}</td>
+							<td>{{ proposal.budget }}</td>
+							<td>{{ proposal.responsible }}</td>
+
+						</tr>
+					{% endfor %}
+				  </tbody>
+				</table>
+			</div>
+		</div>
+		-->
+	{% endcomment %}
+	</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		$('#active_table').DataTable();
+	});
+</script>
+<script>
+	$(document).ready(function () {
+		$('#signed_table').DataTable();
+	});
+</script>
+<script>
+	$(document).ready(function () {
+		$('#rejected_table').DataTable();
+	});
+</script>
+
+<script>
+	$("#alert").fadeTo(2000, 500).slideUp(500, function(){
+    $("#alert").alert('close');
+});
+</script>
+
+{% endblock %}

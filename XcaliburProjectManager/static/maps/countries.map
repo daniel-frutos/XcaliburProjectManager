@@ -1,0 +1,14 @@
+LAYER
+    NAME "countries"
+    TYPE POLYGON
+    STATUS ON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "dbname=viewer_country user=postgres password=postgres host=localhost port=5432"
+    DATA "geom from viewer_country using srid=3857"
+    CLASS
+        STYLE
+            COLOR 255 0 0
+            OUTLINECOLOR 0 0 0
+        END
+    END
+END

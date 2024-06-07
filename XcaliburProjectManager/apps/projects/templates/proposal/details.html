@@ -1,0 +1,100 @@
+{% extends 'includes/base.html' %}
+
+
+{% load crispy_forms_tags %}
+
+{% block details %}
+	<h1>Proposal Details</h1>
+    {% if form.locked.value == False and form.status.value != 'rejected' %}
+      <a href="/project/create/{{form.instance.id}}" class="btn btn-outline-success">Convert to project</a>
+    {% else %}
+        {% if form.status.value == 'rejected' %}
+        {% else %}
+            <p class="alert alert-danger">This proposal is already a project. It can't be modified.</p>
+        {% endif %}
+    {% endif %}
+
+
+	<form method="POST">
+		<fieldset disabled="disabled"> 
+		{% csrf_token %}
+		{{ form|crispy }}
+		</fieldset>
+		{% if form.uploads.value %}
+			<a href="http://localhost/docs/{{form.country.value}}/" target="blank">View related documentation</a>
+		{% endif %}
+    <hr>
+        {% if form.locked.value == False %}
+            <a href="update/" class="btn btn-outline-primary">Edit</a>
+            <a href="delete/" class="btn btn-outline-danger">Delete</a>
+        {% endif%}
+	</form>
+
+<!-- 	<hr>
+		<h1>Map</h1>
+        <div id="map"></div> -->
+
+  {% if coords %}
+  <hr>
+    <h1>OpenStreetMap</h1>
+        <div id="mapid"></div>
+  {% endif %}
+
+</div>
+
+<!-- <script>
+  var map;
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: {{coords.0.0}}, lng: {{coords.0.1}}},
+      zoom: 12,
+
+    });
+        var triangleCoords = [
+        	{% for coor in coords %}
+        		{lat: {{coor.0}}, lng: {{coor.1}}},
+        	{% endfor %}
+        ];
+        
+    var bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        bermudaTriangle.setMap(map);
+  }
+</script> -->
+
+<script>
+  var mymap = L.map('mapid').setView([{{coords.0.0}}, {{coords.0.1}}], 7);
+
+  var polygon = L.polygon([
+    {% for coor in coords %}
+      [{{coor.0}}, {{coor.1}}],
+    {% endfor %}
+    ]).addTo(mymap);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox.streets',
+  accessToken: 'pk.eyJ1IjoiZ3JvdXB4Y2FsaWJ1ciIsImEiOiJjazJxODR6NWgwYmFyM2hydTlhb3pwYWwzIn0.ymd3QueGOaiMYaaUIXlVPw'
+}).addTo(mymap);
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyCgIA0N2i5762MUABEEAcLaU3eoMHY32zs
+&callback=initMap">
+</script>
+
+	
+
+{% endblock %}
+
+
+
+

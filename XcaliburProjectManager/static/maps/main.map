@@ -1,0 +1,104 @@
+MAP
+  NAME "Servidor de mapas geologicos de uganda"
+  # Map image size
+  SIZE 512 512
+  UNITS meters
+  MAXSIZE 10000
+  #./ms_error.txt
+  
+  CONFIG "MS_ERRORFILE" ".\ms_error.txt"
+  DEBUG 5
+
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  # Background color for the map canvas -- change as desired
+  IMAGECOLOR 128 128 255
+  IMAGEQUALITY 95
+  IMAGETYPE png
+
+  OUTPUTFORMAT
+     NAME "png"
+     MIMETYPE "image/png"
+     DRIVER "AGG/PNG"
+     EXTENSION "png"
+     IMAGEMODE RGBA
+     TRANSPARENT ON
+     FORMATOPTION          "INTERLACE=OFF"   #for tilecache, metaTile On
+  END
+
+
+  # Legend
+  LEGEND
+    IMAGECOLOR 255 255 255
+    STATUS ON
+	TRANSPARENT OFF
+    KEYSIZE 16 10
+    LABEL
+      TYPE truetype
+      FONT ver
+      SIZE 8
+      COLOR 0 0 0
+    END
+  END
+  
+  #Symbols
+
+  # Web interface definition. Only the template parameter
+  # is required to display a map. See MapServer documentation
+  WEB
+    # Set IMAGEPATH to the path where MapServer should
+    # write its output.
+    IMAGEPATH '\\tmp\\'
+
+    # Set IMAGEURL to the url that points to IMAGEPATH
+    # as defined in your web server configuration
+    IMAGEURL '\\tmp\\'
+
+    # WMS server settings
+    METADATA
+      'ows_enable_request'  '*'
+      'wms_title'           'Servidor_Mapas_PS'
+      'wms_onlineresource'  'http:\\\\apps.argongra.com\\cgi-bin\\mapserv?MAP=c:\\datos\\catastro\\catastro.map'
+      'wms_srs'             "EPSG:4326"
+      'wms_feature_info_mime_type'   'text\\html'
+	  "wms_rangeset_nullvalue" "-9999"
+	  
+    END
+
+    #Scale range at which web interface will operate
+    # Template and header\\footer settings
+    # Only the template parameter is required to display a map. See MapServer documentation
+    TEMPLATE 'fooOnlyForWMSGetFeatureInfo'
+  END
+	
+	LAYER
+		GROUP 'aoi'
+		NAME 'aoi'
+		TYPE POLYGON
+		DUMP true
+	
+		TEMPLATE fooOnlyForWMSGetFeatureInfo
+		CONNECTIONTYPE postgis
+		CONNECTION "dbname='project_manager' host=localhost port=5432 user='postgres' password='postgres' sslmode=disable"
+		DATA "geom FROM (SELECT id, title,  geom FROM public.projects_proposal) as foo using unique id using srid=4326"
+		METADATA
+			'ows_title' 'aoi'
+		END
+		PROJECTION
+			"init=epsg:4326"
+		END
+		LABELITEM 'title'
+
+		CLASS
+			NAME "Line"
+			STYLE
+				 WIDTH 2
+				 COLOR 255 0 0
+				 OUTLINECOLOR 0 255 0
+			END
+		END 
+	END
+END

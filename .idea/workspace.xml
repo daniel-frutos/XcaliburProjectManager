@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Xcalibur Project Manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/login/templates/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/country_codes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms-working.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/client/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/project/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/projects/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/responsible/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer_full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/ol-layerswitcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/project-manager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/images/logo_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/images/user-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/jquery-slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/js/ol-layerswitcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/countries.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/main.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/projects.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/viewer/css/layerswitcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/viewer/js/layerswitcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/templates/includes/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/templates/includes/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2h5jXez0mfw9wgaHRIEJN4QLlIv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/DanielFrutos/PycharmProjects/Xcalibur Project Manager/XcaliburProjectManager/static/maps"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DanielFrutos\PycharmProjects\Xcalibur Project Manager\XcaliburProjectManager\static\maps" />
+      <recent name="C:\Users\DanielFrutos\PycharmProjects\Xcalibur Project Manager\XcaliburProjectManager\apps\viewer" />
+      <recent name="C:\Users\DanielFrutos\PycharmProjects\Xcalibur Project Manager\XcaliburProjectManager" />
+      <recent name="C:\Users\DanielFrutos\PycharmProjects\Xcalibur Project Manager\XcaliburProjectManager\apps\projects" />
+      <recent name="C:\Users\DanielFrutos\PycharmProjects\Xcalibur Project Manager\XcaliburProjectManager\apps\projects\templates" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="" />
+      <created>1716890873209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716890873209</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/XcaliburProjectManager/XcaliburProjectManager/urls.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,484 @@
+{% extends 'includes/base.html' %}
+
+
+{% block css %}
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+
+{% block details %}
+
+	{% if modify %}
+		<h1>Modify proposal</h1>
+	{% else %}
+		<h1>Create new proposal</h1>
+	{% endif %}
+	{%block form%}
+	<form method="POST" enctype="multipart/form-data">
+			<hr>
+ 			{% csrf_token %}
+				<div class="accordion" id="accordionform">
+				  	<div class="card">
+				    	<div class="card-header" id="headingOne">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><p class="h4 mb-1 text-left">
+				          		General <font color="red">(Required)</font>
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+
+				    	<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionform">
+					      	<div class="card-body">
+
+							    <div class="form-row">
+
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.title | as_crispy_field}}
+							        </div>
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.country | as_crispy_field }}
+							        </div>
+							    </div>
+					   		    <div class="form-row">
+					   		        <div class="form-group col">
+							        	{{form.description | as_crispy_field}}
+							        </div>
+					   		    </div>
+					   		    <div class="form-row">
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.responsible | as_crispy_field}}
+					   				</div>
+					   				<div class="form-group col-md-4 mb-0" style="padding-top: 38px">
+										<a href="/responsible/create/"
+										  class="btn btn-custom-outline-success"
+										  target="popup"
+										  onclick="window.open('/responsible/create/','popup','width=600,height=600'); return false;">
+										    Add New
+										</a>
+										<button onClick="window.location.reload();" class="btn btn-custom-primary">
+											<i class="fa fa-refresh fa-spin-hover"></i>
+										</button>
+							        </div>
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.status | as_crispy_field }}
+					   				</div>
+					   			</div>
+					   		</div>
+					   	</div>
+					</div>
+   		    		<div class="card">
+				    	<div class="card-header" id="headingTwo">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><p class="h4 mb-1 text-left">
+				          		Client <font color="red">(Required)</font>
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionform">
+					      	<div class="card-body">
+					      		<div class="form-row">
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.client_name | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-6 mb-0" style="padding-top: 38px">
+										<a href="/client/create/"
+										  class="btn btn-custom-outline-success"
+										  target="popup"
+										  onclick="window.open('/client/create/','popup','width=600,height=600'); return false;">
+										    Add New
+										</a>
+										<button onClick="window.location.reload();" class="btn btn-custom-primary">
+											<i class="fa fa-refresh fa-spin-hover"></i>
+										</button>
+							        </div>
+		    					</div>
+		    					<div class="form-row">
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact | as_crispy_field }}
+					   				</div>
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact_email | as_crispy_field }}
+					   				</div>
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact_phone | as_crispy_field }}
+					   				</div>
+					   			</div>
+		    				</div>
+		    			</div>
+		    		</div>
+   		    		<div class="card">
+				    	<div class="card-header" id="headingThree">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><p class="h4 mb-1 text-left">
+				          		Economic
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionform">
+					      	<div class="card-body">
+							    <div class="form-row">
+							    	<div class="form-group col-md-4 mb-0">
+							        	{{form.financing | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-4 mb-0">
+							        	{{form.financing_type | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-4 mb-0">
+							        	{{form.budget | as_crispy_field }}
+							        </div>
+							    </div>
+							</div>
+		    			</div>
+		    		</div>
+   		    		<div class="card">
+				    	<div class="card-header" id="headingFour">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><p class="h4 mb-1 text-left">
+				          		Date
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionform">
+					      	<div class="card-body">
+							    <div class="form-row">
+
+							        <div class="form-group col-md-4 mb-0">
+							        	{{form.project_start_date | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-4 mb-0">
+							        	{{form.duration | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-4 mb-0">
+							        	{{form.proposal_create_date | as_crispy_field }}
+							        </div>
+							    </div>
+							</div>
+						</div>
+					</div>
+ 					<div class="card">
+				    	<div class="card-header" id="headingFive">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"><p class="h4 mb-1 text-left">
+				          		Services
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionform">
+					      	<div class="card-body">
+					   		    <section>
+						   		    <ul style="list-style-type:none;">
+									    <div class="form-row">
+									    	<li>
+										        <div class="form-group col-md-4 mb-0">
+										        	{{form.standard_grav | as_crispy_field }}
+										        </div>
+									        </li>
+									        <div class="form-group col-md-4 mb-0">
+									        	{{form.standard_grav_ls | as_crispy_field }}
+									        </div>
+									    </div>
+									    <div class="form-row">
+									    	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.ftg_grav | as_crispy_field }}
+										       	</div>
+									       	</li>
+									       	<div class="form-group col-md-4 mb-0">
+									        	{{form.ftg_grav_ls | as_crispy_field }}
+									        </div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.magnetometry | as_crispy_field }}
+										       	</div>
+									       	</li>
+									      	<div class="form-group col-md-4 mb-0">
+									       		{{form.magnetometry_ls | as_crispy_field }}
+									       	</div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.mag_grad | as_crispy_field }}
+										       	</div>
+									       	</li>
+									      	<div class="form-group col-md-4 mb-0">
+									       		{{form.mag_grad_ls | as_crispy_field }}
+									       	</div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.spectrometry | as_crispy_field }}
+										       	</div>
+									       	</li>
+									      	<div class="form-group col-md-4 mb-0">
+									       		{{form.spectrometry_ls | as_crispy_field }}
+									       	</div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.hem | as_crispy_field }}
+										       	</div>
+									       	</li>
+										    <div class="form-group col-md-4 mb-0">
+									       		{{form.hem_ls | as_crispy_field }}
+									       	</div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.ftem | as_crispy_field }}
+										       	</div>
+									       	</li>
+									      	<div class="form-group col-md-4 mb-0">
+									       		{{form.ftem_ls | as_crispy_field }}
+									       	</div>
+									    </div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-4 mb-0">
+										       		{{form.others | as_crispy_field }}
+										       	</div>
+									       	</li>
+									      	<div class="form-group col-md-4 mb-0">
+									       		{{form.others_desc | as_crispy_field }}
+									       	</div>
+									    </div>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+ 					<div class="card">
+				    	<div class="card-header" id="headingSix">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><p class="h4 mb-1 text-left">
+				          		Area
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionform">
+					      	<div class="card-body">
+					   			<div class="form-row">
+					   				<div class="form-group col-md-12 mb-0">
+					   					<p>Coordinates</p>
+					   				</div>
+					   			</div>
+								<div class="form-row">
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.coordinates | as_crispy_field }}
+							        </div>
+							    </div>
+							    <div class="form-row">
+							    	<div class="form-group col-md-4 mb-0">
+							        	{{form.area | as_crispy_field }}
+							        </div>
+							    </div>
+							</div>
+						</div>
+					</div>
+					{% comment %}
+<!--   					<div class="card">
+				    	<div class="card-header" id="headingSeven">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven"><p class="h4 mb-1 text-left">
+				          		Contact
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionform">
+					      	<div class="card-body">
+					   			<div class="form-row">
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact | as_crispy_field }}
+					   				</div>
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact_email | as_crispy_field }}
+					   				</div>
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.foreign_contact_phone | as_crispy_field }}
+					   				</div>
+					   			</div>
+					   		</div>
+					   	</div>
+					</div> -->
+					{% endcomment %}
+					{% comment %}
+					<div class="card">
+				    	<div class="card-header" id="headingEight">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight"><p class="h4 mb-1 text-left">
+				          		Files
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionform">
+					      	<div class="card-body">
+					   			<div class="form-row">
+					   				<div class="form-group col">
+					   					{{ form.uploads | as_crispy_field }}
+					   				</div>
+					   			</div>
+					   		</div>
+					   	</div>
+					</div>
+					{% endcomment %}
+  					<div class="card">
+				    	<div class="card-header" id="headingNine">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine"><p class="h4 mb-1 text-left">
+				          		Other
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+				    	<div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionform">
+					      	<div class="card-body">
+					   			<div class="form-row">
+					   				<div class="form-group col-md-4 mb-0">
+					   					{{ form.success_rate | as_crispy_field }}
+					   				</div>
+					   			</div>
+					   			<div class="form-row">
+					   				<div class="form-group col">
+					   					{{ form.observations | as_crispy_field }}
+					   				</div>
+					   			</div>
+					   		</div>
+					   	</div>
+					</div>
+				</div>
+   			<hr>
+		<button type="submit" class="btn btn-custom-outline-success">Save</button>
+	</form>
+	{%endblock%}
+
+
+
+
+	{%block js%}
+	<script type="text/javascript">
+		function check_standard_grav() {
+		   document.getElementById('id_standard_grav_ls').disabled = 
+		                   !document.getElementById('id_standard_grav').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_ftg_grav() {
+		   document.getElementById('id_ftg_grav_ls').disabled = 
+		                   !document.getElementById('id_ftg_grav').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_magnetometry() {
+		   document.getElementById('id_magnetometry_ls').disabled = 
+		                   !document.getElementById('id_magnetometry').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_mag_grad() {
+		   document.getElementById('id_mag_grad_ls').disabled = 
+		                   !document.getElementById('id_mag_grad').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_spectrometry() {
+		   document.getElementById('id_spectrometry_ls').disabled = 
+		                   !document.getElementById('id_spectrometry').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_hem() {
+		   document.getElementById('id_hem_ls').disabled = 
+		                   !document.getElementById('id_hem').checked;
+		}
+	</script>
+
+	<script type="text/javascript">
+		function check_ftem() {
+		   document.getElementById('id_ftem_ls').disabled = 
+		                   !document.getElementById('id_ftem').checked;
+		}
+	</script>
+	<script type="text/javascript">
+		function check_others() {
+		   document.getElementById('id_others_desc').disabled = 
+		                   !document.getElementById('id_others').checked;
+		}
+	</script>
+
+	 <script>
+			var map = L.map('map').setView([51.505, -0.09], 13);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+			}).addTo(map);
+
+			var drawnItems = new L.FeatureGroup();
+			map.addLayer(drawnItems);
+
+			var drawControl = new L.Control.Draw({
+				draw: {
+					polygon: true,
+					polyline: false,
+					rectangle: false,
+					circle: false,
+					circlemarker: false,
+					marker: false
+				},
+				edit: {
+					featureGroup: drawnItems
+				}
+			});
+			map.addControl(drawControl);
+
+			map.on(L.Draw.Event.CREATED, function (e) {
+				var layer = e.layer;
+				drawnItems.addLayer(layer);
+				updatePolygonData();
+			});
+
+			function updatePolygonData() {
+				var data = drawnItems.toGeoJSON();
+				var polygonData = JSON.stringify(data.geometry);
+				$('input[name=polygon_data]').val(polygonData);
+			}
+		</script>
+	{%endblock%}
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+    	<script type="text/javascript">
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+    </script>
+
+{% endblock %}
+
+ 	
+

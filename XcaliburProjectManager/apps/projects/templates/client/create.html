@@ -1,0 +1,66 @@
+{% extends 'includes/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block details %}
+	<h1>Create new client</h1>
+
+	{% with referer=request.META.HTTP_REFERER %}
+				{% if '/client/create/' in request.META.HTTP_REFERER %}
+					<div id="alert" class="alert alert-dismissable alert-success" role="alert">
+					<button type="button" class="close" data-dismiss="alert"aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+			  		New client has been created successfully
+					</div>
+				{% endif%}
+		{% endwith %}
+
+
+	<form method="POST" enctype="multipart/form-data"> 
+			<hr>
+ 			{% csrf_token %}
+				<div class="accordion" id="accordionform">
+				  	<div class="card">
+				    	<div class="card-header" id="headingOne">
+				      		<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><p class="h4 mb-1 text-left">
+				          		Client
+				          		</p>
+				       			</button>
+				      		</h2>
+				    	</div>
+
+				    	<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionform">
+					      	<div class="card-body">
+							    <div class="form-row">
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.client_name | as_crispy_field }}
+							        </div>
+							     	<div class="form-group col-md-6 mb-0">
+							        	{{form.client_type | as_crispy_field }}
+							        </div>
+							        <div class="form-group col-md-6 mb-0">
+							        	{{form.client_abbrev | as_crispy_field }}
+							        </div>
+					   			</div>
+					   		</div>
+					   	</div>
+					</div>
+				</div>
+   			<hr>
+		<button type="submit" class="btn btn-custom-outline-success">Create</button>
+		<button type="button" class="btn btn-custom-danger" onclick="window.close();">Close</button>
+
+	</form>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+	$("#alert").fadeTo(2000, 500).slideUp(500, function(){
+    $("#alert").alert('close');
+});
+</script>
+{% endblock %}
