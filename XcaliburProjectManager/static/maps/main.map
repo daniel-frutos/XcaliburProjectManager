@@ -96,8 +96,8 @@ MAP
 			NAME "Line"
 			STYLE
 				 WIDTH 2
-				 COLOR 255 0 0
-				 OUTLINECOLOR 0 255 0
+				 #COLOR 255 0 0
+				 OUTLINECOLOR 255 51 0
 			END
 		END 
 	END
