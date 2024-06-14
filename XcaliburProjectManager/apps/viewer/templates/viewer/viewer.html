@@ -3,22 +3,23 @@
 {% block css %}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 {% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css">
+<link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
 <link rel="stylesheet" href=" {% static 'css/project-manager.css' %}">
 <!-- OpenLayers CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css" type="text/css">
 {% endblock %}
 
 {% block style %}
-<style>
-    .container-local {
-        width: 100%;
-        height: 900px; /* Adjust the height as needed */
-    }
-</style>
+    <style>
+        .container-local {
+            width: 100%;
+        }
+    </style>
 {% endblock %}
 
 {% block main %}
-<div id="map" class="map"></div>
+    <div id="map" class="map"></div>
 {% endblock %}
 
 {% block active %}
@@ -26,34 +27,47 @@
 {% endblock %}
 
 {% block scripts %}
-<!-- OpenLayers JS -->
-<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
-<script>
-    // Initialize the OpenLayers map
-    var map = new ol.Map({
-        target: 'map',
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.OSM()
+    <script>
+        // Initialize the OpenLayers map
+        const baseLayer = new ol.layer.Tile({
+            source: new ol.source.OSM(),
+            title: 'OSM Base Map',
+            type: 'base'
+        });
+
+        const aoiLayer = new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                url: 'http://localhost:8080/cgi-bin/mapserv.exe?map=C:\\Users\\DanielFrutos\\PycharmProjects\\Xcalibur\ Project\ Manager\\XcaliburProjectManager\\static\\maps\\main.map',
+                params: {
+                    'LAYERS': 'aoi',
+                    'TILED': true,
+                    'SRS': 'EPSG:4326'
+                },
+                serverType: 'mapserver'  // MapServer WMS server type
             }),
-            new ol.layer.Tile({
-                source: new ol.source.TileWMS({
-                    url: 'http://localhost:8080/cgi-bin/mapserv.exe?map=C:\\Users\\DanielFrutos\\PycharmProjects\\Xcalibur\ Project\ Manager\\XcaliburProjectManager\\static\\maps\\main.map',
-                    params: {
-                        'LAYERS': 'aoi',
-                        'TILED': true,
-                        'SRS': 'EPSG:4326'
-                    },
-                    serverType: 'mapserver'  // MapServer WMS server type
-                })
+            title: 'AOI Layer',
+            visible: true // Initially set to false
+        });
+
+        const map = new ol.Map({
+            target: 'map',
+            layers: [
+                baseLayer,
+                aoiLayer
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([0, 0], 'EPSG:4326'),
+                projection: 'EPSG:4326',
+                zoom: 2,
+                minZoom: 3,
             })
-        ],
-        view: new ol.View({
-            center: ol.proj.fromLonLat([0, 0], 'EPSG:4326'),
-            projection: 'EPSG:4326',
-            zoom: 2,
-            minZoom: 3,
-        })
-    });
-</script>
+        });
+
+        const layerSwitcher = new ol.control.LayerSwitcher({
+            tipLabel: 'Layers', // Optional label for button
+            groupSelectStyle: 'children' // Can be 'none' [default], 'children' or 'group'
+        });
+        map.addControl(layerSwitcher);
+        layerSwitcher.showPanel;
+    </script>
 {% endblock %}

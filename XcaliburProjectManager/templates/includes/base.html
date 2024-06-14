@@ -9,17 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	{% block css %}
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
+
 	{% endblock %}
 
 	{% block style %}
@@ -113,7 +106,8 @@
 
 	<script>window.jQuery || document.write('<script src=" {% static 'js/jquery-slim.min.js' %}"><\/script>')</script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+	<script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
     {%block scripts%}
     {%endblock%}
 

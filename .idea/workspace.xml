@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Working viewer but with ugly colors">
+    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Wide map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/projects/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/css/project-manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/project-manager.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/templates/includes/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/templates/includes/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717759277821</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Wide map">
+      <option name="closed" value="true" />
+      <created>1718279761599</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718279761599</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working viewer but with ugly colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working viewer but with ugly colors" />
+    <MESSAGE value="Wide map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wide map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

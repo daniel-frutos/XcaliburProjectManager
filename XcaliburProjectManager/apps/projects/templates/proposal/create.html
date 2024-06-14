@@ -41,9 +41,16 @@
 							        <div class="form-group col-md-6 mb-0">
 							        	{{form.title | as_crispy_field}}
 							        </div>
-							        <div class="form-group col-md-6 mb-0">
+									<div class="form-group col-md-6 mb-0">
 							        	{{form.country | as_crispy_field }}
 							        </div>
+									<div class="form-group col-md-6 mb-0">
+							        	{{form.reference | as_crispy_field}}
+							        </div>
+									<div class="form-group col-md-6 mb-0">
+							        	{{form.external_reference | as_crispy_field}}
+							        </div>
+
 							    </div>
 					   		    <div class="form-row">
 					   		        <div class="form-group col">
@@ -54,7 +61,7 @@
 					   				<div class="form-group col-md-4 mb-0">
 					   					{{ form.responsible | as_crispy_field}}
 					   				</div>
-					   				<div class="form-group col-md-4 mb-0" style="padding-top: 38px">
+									<div class="form-group col-md-4 mb-0" style="padding-top: 38px">
 										<a href="/responsible/create/"
 										  class="btn btn-custom-outline-success"
 										  target="popup"
@@ -65,6 +72,18 @@
 											<i class="fa fa-refresh fa-spin-hover"></i>
 										</button>
 							        </div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4 mb-0">
+					   					{{ form.responsible2 | as_crispy_field}}
+					   				</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4 mb-0">
+					   					{{ form.responsible3 | as_crispy_field}}
+					   				</div>
+								</div>
+								<div class="form-row">
 					   				<div class="form-group col-md-4 mb-0">
 					   					{{ form.status | as_crispy_field }}
 					   				</div>
@@ -113,7 +132,7 @@
 		    				</div>
 		    			</div>
 		    		</div>
-   		    		<div class="card">
+   		    		<!--<div class="card">
 				    	<div class="card-header" id="headingThree">
 				      		<h2 class="mb-0">
 				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><p class="h4 mb-1 text-left">
@@ -137,7 +156,7 @@
 							    </div>
 							</div>
 		    			</div>
-		    		</div>
+		    		</div>-->
    		    		<div class="card">
 				    	<div class="card-header" id="headingFour">
 				      		<h2 class="mb-0">
@@ -339,7 +358,7 @@
 					   	</div>
 					</div>
 					{% endcomment %}
-  					<div class="card">
+  					<!--<div class="card">
 				    	<div class="card-header" id="headingNine">
 				      		<h2 class="mb-0">
 				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine"><p class="h4 mb-1 text-left">
@@ -362,7 +381,7 @@
 					   			</div>
 					   		</div>
 					   	</div>
-					</div>
+					</div>-->
 				</div>
    			<hr>
 		<button type="submit" class="btn btn-custom-outline-success">Save</button>

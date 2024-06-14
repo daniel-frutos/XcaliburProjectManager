@@ -34,6 +34,16 @@ class proposalform(forms.ModelForm):
         label='Title',
         widget=forms.TextInput(attrs={'placeholder': 'Proposal name or title'}),
     )
+    reference = forms.CharField(
+        max_length=10,
+        label='Reference',
+        widget=forms.TextInput(attrs={'placeholder': 'Internal reference'}),
+    )
+    external_reference = forms.CharField(
+        max_length=50,
+        label='External Reference',
+        widget=forms.TextInput(attrs={'placeholder': 'External reference'}),
+    )
     # country = forms.CharField(
     # 	max_length = 100,
     # 	label = 'Country',
@@ -214,6 +224,12 @@ class proposalform(forms.ModelForm):
     responsible = forms.ModelChoiceField(
         queryset=Responsible.objects.all()
     )
+    responsible2 = forms.ModelChoiceField(
+        queryset=Responsible.objects.all()
+    )
+    responsible3 = forms.ModelChoiceField(
+        queryset=Responsible.objects.all()
+    )
     foreign_contact = forms.CharField(
         required=False,
         max_length=30,
@@ -290,6 +306,18 @@ class projectform(forms.ModelForm):
         max_length=100,
         label='Title',
         widget=forms.TextInput(attrs={'placeholder': 'Proposal name or title'}),
+    )
+
+    reference = forms.CharField(
+        max_length=10,
+        label='Internal Reference',
+        widget=forms.TextInput(attrs={'placeholder': 'Internal reference'}),
+    )
+
+    external_reference = forms.CharField(
+        max_length=50,
+        label='External Reference',
+        widget=forms.TextInput(attrs={'placeholder': 'External reference'}),
     )
     # country = forms.CharField(
     # 	max_length = 100,
@@ -465,6 +493,12 @@ class projectform(forms.ModelForm):
         required=False,
     )
     responsible = forms.ModelChoiceField(
+        queryset=Responsible.objects.all()
+    )
+    responsible2 = forms.ModelChoiceField(
+        queryset=Responsible.objects.all()
+    )
+    responsible3 = forms.ModelChoiceField(
         queryset=Responsible.objects.all()
     )
     foreign_contact = forms.CharField(

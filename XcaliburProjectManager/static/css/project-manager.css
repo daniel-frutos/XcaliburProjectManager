@@ -357,4 +357,38 @@ body {
   color: #cd5554;
 }
 
+.page-item.active .page-link {
+  color: #cd5554;
+  background-color: #ffff;
+}
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #451b17;
+  border-color: #451b17;
+}
 
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #451b17;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #451b17;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(69, 27, 23,.25);
+}
