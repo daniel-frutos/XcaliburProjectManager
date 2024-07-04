@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Updated model and colors">
-      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/viewer/js/map.js" afterDir="false" />
+    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Color picker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/projects/projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer_full.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/viewer/templates/viewer/viewer_full.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/css/project-manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/css/project-manager.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/countries.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/main.map" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/main.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/projects.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718363742304</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Color picker">
+      <option name="closed" value="true" />
+      <created>1720088271515</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720088271515</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working viewer but with ugly colors" />
     <MESSAGE value="Wide map" />
     <MESSAGE value="Updated model and colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated model and colors" />
+    <MESSAGE value="Color picker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Color picker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

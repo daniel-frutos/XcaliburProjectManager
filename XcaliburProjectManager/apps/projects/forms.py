@@ -225,10 +225,12 @@ class proposalform(forms.ModelForm):
         queryset=Responsible.objects.all()
     )
     responsible2 = forms.ModelChoiceField(
-        queryset=Responsible.objects.all()
+        queryset=Responsible.objects.all(),
+        required=False,
     )
     responsible3 = forms.ModelChoiceField(
-        queryset=Responsible.objects.all()
+        queryset=Responsible.objects.all(),
+        required=False,
     )
     foreign_contact = forms.CharField(
         required=False,

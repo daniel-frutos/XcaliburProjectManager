@@ -304,8 +304,12 @@
 							    </div>
 								<div class="form-row">
 									<div class="form-group col-md-6 mb-0">
-										<label for="colorField">Color</label>
-										<input type="text" class="form-control" id="colorField" name="color" value="255 255 255" maxlength="15" pattern="\d{1,3}\s\d{1,3}\s\d{1,3}" title="Must be in the format '255 255 255'" required>
+										<label for="colorPicker">Select Color</label>
+										<input type="color" class="form-control" id="colorPicker">
+									</div>
+									<div class="form-group col-md-6 mb-0">
+										<label for="colorField">Color (R G B)</label>
+										<input type="text" class="form-control" id="colorField" name="color" value="255 255 255" maxlength="15" pattern="\d{1,3}\s\d{1,3}\s\d{1,3}" title="Must be in the format '255 255 255'" required readonly>
 										<div class="invalid-feedback">
 											Please enter a valid color in the format '255 255 255'.
 										</div>
@@ -494,27 +498,42 @@
 			}
 		</script>
 		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			var colorField = document.getElementById('colorField');
-			var form = colorField.form;
+			document.addEventListener('DOMContentLoaded', function() {
+				var colorPicker = document.getElementById('colorPicker');
+				var colorField = document.getElementById('colorField');
+				var form = colorField.form;
 
-			colorField.addEventListener('input', function() {
-				var value = colorField.value;
-				var regex = /^\d{1,3}\s\d{1,3}\s\d{1,3}$/;
-				if (!regex.test(value) || value.split(' ').some(num => num > 255)) {
-					colorField.setCustomValidity("Invalid format. Please enter a color in the format '255 255 255'.");
-				} else {
-					colorField.setCustomValidity("");
+				colorPicker.addEventListener('input', function() {
+					var hexColor = colorPicker.value;
+					var rgb = hexToRgb(hexColor);
+					colorField.value = `${rgb.r} ${rgb.g} ${rgb.b}`;
+				});
+
+				colorField.addEventListener('input', function() {
+					var value = colorField.value;
+					var regex = /^\d{1,3}\s\d{1,3}\s\d{1,3}$/;
+					if (!regex.test(value) || value.split(' ').some(num => num > 255)) {
+						colorField.setCustomValidity("Invalid format. Please enter a color in the format '255 255 255'.");
+					} else {
+						colorField.setCustomValidity("");
+					}
+				});
+
+				form.addEventListener('submit', function(event) {
+					if (colorField.value.trim() === '') {
+						colorField.value = '255 255 255';
+					}
+				});
+
+				function hexToRgb(hex) {
+					var bigint = parseInt(hex.slice(1), 16);
+					var r = (bigint >> 16) & 255;
+					var g = (bigint >> 8) & 255;
+					var b = bigint & 255;
+					return {r: r, g: g, b: b};
 				}
 			});
-
-			form.addEventListener('submit', function(event) {
-				if (colorField.value.trim() === '') {
-					colorField.value = '255 255 255';
-				}
-			});
-		});
-		</script>
+			</script>
 	{%endblock%}
 {% endblock %}
 
