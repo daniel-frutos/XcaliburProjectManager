@@ -27,6 +27,8 @@
 {% endblock %}
 
 {% block scripts %}
+{% csrf_token %}
+<script src="{% static 'viewer/js/map.js' %}"></script>
     <script>
         // Initialize the OpenLayers map
         const baseLayer = new ol.layer.Tile({
@@ -46,7 +48,7 @@
                 serverType: 'mapserver'  // MapServer WMS server type
             }),
             title: 'AOI Layer',
-            visible: true // Initially set to false
+            visible: false
         });
 
         const map = new ol.Map({
@@ -69,5 +71,6 @@
         });
         map.addControl(layerSwitcher);
         layerSwitcher.showPanel;
+
     </script>
 {% endblock %}

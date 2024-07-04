@@ -44,6 +44,7 @@
 <div class="tab-content">
 		<div id="active" class="container tab-pane active">
 			<a href='/create/' class="btn btn-primary" style="float: right;">Create proposal</a>
+			<!--<button class="btn btn-info" onclick="viewProjectGeometry(39)">View on Map</button>-->
 			<div class="table-responsive" style="text-align:left; padding-top: 3%;" >
 
 				<table id="active_table" class="table table-hover table-sm display compact">
@@ -56,6 +57,7 @@
 					  <th scope="col">Responsible</th>
 						<th scope="col">Responsible 2</th>
 						<th scope="col">Responsible 3</th>
+						<!--<th scope="col">Actions</th>-->
 					</tr>
 				  </thead>
 				  <tbody>
@@ -68,6 +70,9 @@
 							<td>{{ proposal.responsible }}</td>
 							<td>{{ proposal.responsible2 }}</td>
 							<td>{{ proposal.responsible3 }}</td>
+							<!--<td>
+								<button class="btn btn-info" onclick="viewProjectGeometry({{ proposal.id }})">View on Map</button>
+							</td>-->
 						</tr>
 					{% endfor %}
 				  </tbody>

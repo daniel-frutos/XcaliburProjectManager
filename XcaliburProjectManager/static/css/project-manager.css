@@ -392,3 +392,36 @@ body {
   outline: 0;
   box-shadow: 0 0 0 .2rem rgba(69, 27, 23,.25);
 }
+
+.btn-link {
+  color: #451b17;
+}
+
+.btn-link:hover {
+  color: #451b17;
+}
+
+.btn-custom-outline-success{
+  color: #ffff;
+  border-color: #451b17;
+  background-color: #451b17;
+}
+
+.btn-custom-outline-success:hover{
+  color: #ffff;
+  border-color: #ff3300;
+  background-color: #ff3300;
+}
+
+.btn-custom-primary:hover{
+  color: #fff;
+  border-color: #dadadc;
+  background-color: #dadadc;
+}
+
+.btn-custom-primary{
+  color: #fff;
+  border-color: #a6a8aa;
+  background-color: #a6a8aa;
+}
+

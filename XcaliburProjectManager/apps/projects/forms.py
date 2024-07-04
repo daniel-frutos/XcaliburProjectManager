@@ -210,7 +210,7 @@ class proposalform(forms.ModelForm):
 
     coordinates = forms.FileField(
         widget=forms.FileInput(),
-        label='Upload shp or kms',
+        label='Upload kml',
         required=False,
     )
 
@@ -480,7 +480,7 @@ class projectform(forms.ModelForm):
 
     coordinates = forms.FileField(
         widget=forms.FileInput(),
-        label='Upload shp or kms',
+        label='Upload kml',
         required=False,
     )
 

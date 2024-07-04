@@ -83,6 +83,38 @@ MAP
 		TEMPLATE fooOnlyForWMSGetFeatureInfo
 		CONNECTIONTYPE postgis
 		CONNECTION "dbname='project_manager' host=localhost port=5432 user='postgres' password='postgres' sslmode=disable"
+		DATA "geom FROM (SELECT id, title,  geom, color FROM public.projects_proposal) as foo using unique id using srid=4326"
+		METADATA
+			'ows_title' 'aoi'
+		END
+		PROJECTION
+			"init=epsg:4326"
+		END
+		LABELITEM 'title'
+    TRANSPARENCY 20
+
+		CLASS
+			NAME "Polygon"
+      STYLE 
+        COLOR [color]
+      END
+      LABEL
+        MAXSCALEDENOM 10000000  #No muestra el nombre hasta que el zoom no es suficiente para que se vea
+        COLOR 0 0 0
+        SIZE 10
+      END
+    END
+	END
+
+  LAYER
+		GROUP 'aoi'
+		NAME 'aoi_border'
+		TYPE LINE
+		DUMP true
+	
+		TEMPLATE fooOnlyForWMSGetFeatureInfo
+		CONNECTIONTYPE postgis
+		CONNECTION "dbname='project_manager' host=localhost port=5432 user='postgres' password='postgres' sslmode=disable"
 		DATA "geom FROM (SELECT id, title,  geom FROM public.projects_proposal) as foo using unique id using srid=4326"
 		METADATA
 			'ows_title' 'aoi'
@@ -95,9 +127,8 @@ MAP
 		CLASS
 			NAME "Line"
 			STYLE
-				 WIDTH 2
-				 #COLOR 255 0 0
-				 OUTLINECOLOR 255 51 0
+				 WIDTH 1
+				 OUTLINECOLOR 69 27 23
 			END
 		END 
 	END
