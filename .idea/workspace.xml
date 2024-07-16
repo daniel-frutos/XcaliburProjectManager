@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Color picker">
+    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Visual color picker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720088271515</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Visual color picker">
+      <option name="closed" value="true" />
+      <created>1720089096590</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720089096590</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,7 +121,8 @@
     <MESSAGE value="Wide map" />
     <MESSAGE value="Updated model and colors" />
     <MESSAGE value="Color picker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Color picker" />
+    <MESSAGE value="Visual color picker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visual color picker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
