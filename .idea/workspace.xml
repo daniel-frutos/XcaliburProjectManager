@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="Visual color picker">
+    <list default="true" id="2fffcf38-dfee-4ecd-b9ff-b8846ed07545" name="Changes" comment="All">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0002_project_responsible2_project_responsible3_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0003_project_reference_proposal_reference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0004_project_external_reference_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0005_remove_project_area_remove_project_budget_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0006_proposal_color_alter_proposal_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/migrations/0007_alter_proposal_color.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/apps/projects/templates/proposal/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XcaliburProjectManager/static/maps/ms_error.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721121971390</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="All">
+      <option name="closed" value="true" />
+      <created>1721128421161</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721128421161</updated>
+    </task>
+    <task id="LOCAL-00009" summary="All">
+      <option name="closed" value="true" />
+      <created>1721128960795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721128960795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -131,7 +153,8 @@
     <MESSAGE value="Updated model and colors" />
     <MESSAGE value="Color picker" />
     <MESSAGE value="Visual color picker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Visual color picker" />
+    <MESSAGE value="All" />
+    <option name="LAST_COMMIT_MESSAGE" value="All" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
