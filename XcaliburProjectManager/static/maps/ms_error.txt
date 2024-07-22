@@ -50233,3 +50233,303 @@
 [Tue Jul 16 12:10:13 2024].113000 msSaveImage(stdout) total time: 0.001s
 [Tue Jul 16 12:10:13 2024].113000 mapserv request processing time (msLoadMap not incl.): 0.069s
 [Tue Jul 16 12:10:13 2024].113000 msFreeMap(): freeing map at 0158F3E0.
+[Fri Jul 19 12:59:02 2024].504000 CGI Request 1 on process 13708
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].561000 msDrawMap(): Layer 0 (aoi), 0.054s
+[Fri Jul 19 12:59:02 2024].605000 msDrawMap(): Layer 1 (aoi_border), 0.044s
+[Fri Jul 19 12:59:02 2024].605000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].605000 msDrawMap() total time: 0.099s
+[Fri Jul 19 12:59:02 2024].607000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].607000 mapserv request processing time (msLoadMap not incl.): 0.103s
+[Fri Jul 19 12:59:02 2024].607000 msFreeMap(): freeing map at 01153820.
+[Fri Jul 19 12:59:02 2024].504000 CGI Request 1 on process 1536
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].561000 msDrawMap(): Layer 0 (aoi), 0.054s
+[Fri Jul 19 12:59:02 2024].606000 msDrawMap(): Layer 1 (aoi_border), 0.045s
+[Fri Jul 19 12:59:02 2024].606000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].606000 msDrawMap() total time: 0.100s
+[Fri Jul 19 12:59:02 2024].608000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].608000 mapserv request processing time (msLoadMap not incl.): 0.104s
+[Fri Jul 19 12:59:02 2024].608000 msFreeMap(): freeing map at 008EF3D8.
+[Fri Jul 19 12:59:02 2024].504000 CGI Request 1 on process 17464
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].562000 msDrawMap(): Layer 0 (aoi), 0.055s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap(): Layer 1 (aoi_border), 0.046s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap() total time: 0.102s
+[Fri Jul 19 12:59:02 2024].609000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].609000 mapserv request processing time (msLoadMap not incl.): 0.105s
+[Fri Jul 19 12:59:02 2024].609000 msFreeMap(): freeing map at 00A2F700.
+[Fri Jul 19 12:59:02 2024].504000 CGI Request 1 on process 19504
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].562000 msDrawMap(): Layer 0 (aoi), 0.055s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap(): Layer 1 (aoi_border), 0.046s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].608000 msDrawMap() total time: 0.102s
+[Fri Jul 19 12:59:02 2024].610000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].610000 mapserv request processing time (msLoadMap not incl.): 0.106s
+[Fri Jul 19 12:59:02 2024].610000 msFreeMap(): freeing map at 00F7FC58.
+[Fri Jul 19 12:59:02 2024].504000 CGI Request 1 on process 10812
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].507000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].562000 msDrawMap(): Layer 0 (aoi), 0.055s
+[Fri Jul 19 12:59:02 2024].611000 msDrawMap(): Layer 1 (aoi_border), 0.049s
+[Fri Jul 19 12:59:02 2024].611000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].611000 msDrawMap() total time: 0.105s
+[Fri Jul 19 12:59:02 2024].612000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].612000 mapserv request processing time (msLoadMap not incl.): 0.108s
+[Fri Jul 19 12:59:02 2024].612000 msFreeMap(): freeing map at 00F10E08.
+[Fri Jul 19 12:59:02 2024].689000 CGI Request 1 on process 16472
+[Fri Jul 19 12:59:02 2024].690000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].690000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].736000 msDrawMap(): Layer 0 (aoi), 0.046s
+[Fri Jul 19 12:59:02 2024].772000 msDrawMap(): Layer 1 (aoi_border), 0.036s
+[Fri Jul 19 12:59:02 2024].772000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].772000 msDrawMap() total time: 0.082s
+[Fri Jul 19 12:59:02 2024].773000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].773000 mapserv request processing time (msLoadMap not incl.): 0.084s
+[Fri Jul 19 12:59:02 2024].773000 msFreeMap(): freeing map at 00B16E50.
+[Fri Jul 19 12:59:02 2024].694000 CGI Request 1 on process 7488
+[Fri Jul 19 12:59:02 2024].694000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].694000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].742000 msDrawMap(): Layer 0 (aoi), 0.048s
+[Fri Jul 19 12:59:02 2024].779000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].779000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].779000 msDrawMap() total time: 0.085s
+[Fri Jul 19 12:59:02 2024].780000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].780000 mapserv request processing time (msLoadMap not incl.): 0.086s
+[Fri Jul 19 12:59:02 2024].780000 msFreeMap(): freeing map at 01421E40.
+[Fri Jul 19 12:59:02 2024].696000 CGI Request 1 on process 18736
+[Fri Jul 19 12:59:02 2024].697000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].697000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].746000 msDrawMap(): Layer 0 (aoi), 0.049s
+[Fri Jul 19 12:59:02 2024].783000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].783000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].783000 msDrawMap() total time: 0.086s
+[Fri Jul 19 12:59:02 2024].785000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].785000 mapserv request processing time (msLoadMap not incl.): 0.089s
+[Fri Jul 19 12:59:02 2024].785000 msFreeMap(): freeing map at 011E16F0.
+[Fri Jul 19 12:59:02 2024].696000 CGI Request 1 on process 6608
+[Fri Jul 19 12:59:02 2024].696000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].696000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].748000 msDrawMap(): Layer 0 (aoi), 0.052s
+[Fri Jul 19 12:59:02 2024].785000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].785000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].785000 msDrawMap() total time: 0.089s
+[Fri Jul 19 12:59:02 2024].786000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].786000 mapserv request processing time (msLoadMap not incl.): 0.090s
+[Fri Jul 19 12:59:02 2024].786000 msFreeMap(): freeing map at 006933E8.
+[Fri Jul 19 12:59:02 2024].699000 CGI Request 1 on process 7684
+[Fri Jul 19 12:59:02 2024].699000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].699000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].750000 msDrawMap(): Layer 0 (aoi), 0.051s
+[Fri Jul 19 12:59:02 2024].787000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].787000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].787000 msDrawMap() total time: 0.088s
+[Fri Jul 19 12:59:02 2024].788000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].788000 mapserv request processing time (msLoadMap not incl.): 0.089s
+[Fri Jul 19 12:59:02 2024].788000 msFreeMap(): freeing map at 01750520.
+[Fri Jul 19 12:59:02 2024].702000 CGI Request 1 on process 3352
+[Fri Jul 19 12:59:02 2024].702000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].702000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].751000 msDrawMap(): Layer 0 (aoi), 0.049s
+[Fri Jul 19 12:59:02 2024].788000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].788000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].788000 msDrawMap() total time: 0.086s
+[Fri Jul 19 12:59:02 2024].790000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].790000 mapserv request processing time (msLoadMap not incl.): 0.088s
+[Fri Jul 19 12:59:02 2024].790000 msFreeMap(): freeing map at 00A01590.
+[Fri Jul 19 12:59:02 2024].861000 CGI Request 1 on process 17640
+[Fri Jul 19 12:59:02 2024].862000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].862000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].913000 msDrawMap(): Layer 0 (aoi), 0.051s
+[Fri Jul 19 12:59:02 2024].950000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].950000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].950000 msDrawMap() total time: 0.089s
+[Fri Jul 19 12:59:02 2024].951000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].952000 mapserv request processing time (msLoadMap not incl.): 0.091s
+[Fri Jul 19 12:59:02 2024].952000 msFreeMap(): freeing map at 00BA1CA8.
+[Fri Jul 19 12:59:02 2024].861000 CGI Request 1 on process 20264
+[Fri Jul 19 12:59:02 2024].862000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].862000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].913000 msDrawMap(): Layer 0 (aoi), 0.051s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap(): Layer 1 (aoi_border), 0.041s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap() total time: 0.092s
+[Fri Jul 19 12:59:02 2024].955000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].956000 mapserv request processing time (msLoadMap not incl.): 0.095s
+[Fri Jul 19 12:59:02 2024].956000 msFreeMap(): freeing map at 00E53148.
+[Fri Jul 19 12:59:02 2024].865000 CGI Request 1 on process 14056
+[Fri Jul 19 12:59:02 2024].865000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].865000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].917000 msDrawMap(): Layer 0 (aoi), 0.052s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].954000 msDrawMap() total time: 0.089s
+[Fri Jul 19 12:59:02 2024].956000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].956000 mapserv request processing time (msLoadMap not incl.): 0.091s
+[Fri Jul 19 12:59:02 2024].956000 msFreeMap(): freeing map at 00E22CF0.
+[Fri Jul 19 12:59:02 2024].864000 CGI Request 1 on process 15348
+[Fri Jul 19 12:59:02 2024].864000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].864000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].917000 msDrawMap(): Layer 0 (aoi), 0.053s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap(): Layer 1 (aoi_border), 0.041s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap() total time: 0.094s
+[Fri Jul 19 12:59:02 2024].959000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:02 2024].959000 mapserv request processing time (msLoadMap not incl.): 0.095s
+[Fri Jul 19 12:59:02 2024].959000 msFreeMap(): freeing map at 00D15B88.
+[Fri Jul 19 12:59:02 2024].873000 CGI Request 1 on process 11560
+[Fri Jul 19 12:59:02 2024].874000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].874000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].919000 msDrawMap(): Layer 0 (aoi), 0.045s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap(): Layer 1 (aoi_border), 0.039s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].958000 msDrawMap() total time: 0.084s
+[Fri Jul 19 12:59:02 2024].960000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].960000 mapserv request processing time (msLoadMap not incl.): 0.087s
+[Fri Jul 19 12:59:02 2024].960000 msFreeMap(): freeing map at 014622B8.
+[Fri Jul 19 12:59:02 2024].875000 CGI Request 1 on process 17056
+[Fri Jul 19 12:59:02 2024].876000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:02 2024].876000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:02 2024].919000 msDrawMap(): Layer 0 (aoi), 0.043s
+[Fri Jul 19 12:59:02 2024].961000 msDrawMap(): Layer 1 (aoi_border), 0.042s
+[Fri Jul 19 12:59:02 2024].961000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:02 2024].961000 msDrawMap() total time: 0.085s
+[Fri Jul 19 12:59:02 2024].963000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:02 2024].963000 mapserv request processing time (msLoadMap not incl.): 0.088s
+[Fri Jul 19 12:59:02 2024].963000 msFreeMap(): freeing map at 00C03D68.
+[Fri Jul 19 12:59:03 2024].27000 CGI Request 1 on process 15676
+[Fri Jul 19 12:59:03 2024].28000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].28000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].75000 msDrawMap(): Layer 0 (aoi), 0.047s
+[Fri Jul 19 12:59:03 2024].114000 msDrawMap(): Layer 1 (aoi_border), 0.039s
+[Fri Jul 19 12:59:03 2024].114000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].114000 msDrawMap() total time: 0.086s
+[Fri Jul 19 12:59:03 2024].116000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:03 2024].116000 mapserv request processing time (msLoadMap not incl.): 0.089s
+[Fri Jul 19 12:59:03 2024].116000 msFreeMap(): freeing map at 008E0468.
+[Fri Jul 19 12:59:03 2024].28000 CGI Request 1 on process 15836
+[Fri Jul 19 12:59:03 2024].28000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].28000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].77000 msDrawMap(): Layer 0 (aoi), 0.049s
+[Fri Jul 19 12:59:03 2024].117000 msDrawMap(): Layer 1 (aoi_border), 0.040s
+[Fri Jul 19 12:59:03 2024].117000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].117000 msDrawMap() total time: 0.089s
+[Fri Jul 19 12:59:03 2024].118000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].118000 mapserv request processing time (msLoadMap not incl.): 0.090s
+[Fri Jul 19 12:59:03 2024].118000 msFreeMap(): freeing map at 00C40A40.
+[Fri Jul 19 12:59:03 2024].30000 CGI Request 1 on process 9008
+[Fri Jul 19 12:59:03 2024].30000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].30000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].78000 msDrawMap(): Layer 0 (aoi), 0.048s
+[Fri Jul 19 12:59:03 2024].119000 msDrawMap(): Layer 1 (aoi_border), 0.041s
+[Fri Jul 19 12:59:03 2024].119000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].119000 msDrawMap() total time: 0.089s
+[Fri Jul 19 12:59:03 2024].120000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].120000 mapserv request processing time (msLoadMap not incl.): 0.090s
+[Fri Jul 19 12:59:03 2024].120000 msFreeMap(): freeing map at 00FC1618.
+[Fri Jul 19 12:59:03 2024].44000 CGI Request 1 on process 4000
+[Fri Jul 19 12:59:03 2024].45000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].45000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].86000 msDrawMap(): Layer 0 (aoi), 0.041s
+[Fri Jul 19 12:59:03 2024].123000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:03 2024].123000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].123000 msDrawMap() total time: 0.079s
+[Fri Jul 19 12:59:03 2024].124000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].124000 mapserv request processing time (msLoadMap not incl.): 0.080s
+[Fri Jul 19 12:59:03 2024].124000 msFreeMap(): freeing map at 00DA0B80.
+[Fri Jul 19 12:59:03 2024].48000 CGI Request 1 on process 14920
+[Fri Jul 19 12:59:03 2024].48000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].48000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].90000 msDrawMap(): Layer 0 (aoi), 0.042s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap(): Layer 1 (aoi_border), 0.037s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap() total time: 0.079s
+[Fri Jul 19 12:59:03 2024].129000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:03 2024].129000 mapserv request processing time (msLoadMap not incl.): 0.081s
+[Fri Jul 19 12:59:03 2024].129000 msFreeMap(): freeing map at 014D36E8.
+[Fri Jul 19 12:59:03 2024].47000 CGI Request 1 on process 13612
+[Fri Jul 19 12:59:03 2024].48000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].48000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].89000 msDrawMap(): Layer 0 (aoi), 0.041s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap(): Layer 1 (aoi_border), 0.038s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].127000 msDrawMap() total time: 0.080s
+[Fri Jul 19 12:59:03 2024].129000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].129000 mapserv request processing time (msLoadMap not incl.): 0.082s
+[Fri Jul 19 12:59:03 2024].129000 msFreeMap(): freeing map at 00DD18B8.
+[Fri Jul 19 12:59:03 2024].199000 CGI Request 1 on process 9500
+[Fri Jul 19 12:59:03 2024].199000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].199000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].247000 msDrawMap(): Layer 0 (aoi), 0.048s
+[Fri Jul 19 12:59:03 2024].287000 msDrawMap(): Layer 1 (aoi_border), 0.040s
+[Fri Jul 19 12:59:03 2024].287000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].287000 msDrawMap() total time: 0.088s
+[Fri Jul 19 12:59:03 2024].289000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:03 2024].289000 mapserv request processing time (msLoadMap not incl.): 0.090s
+[Fri Jul 19 12:59:03 2024].289000 msFreeMap(): freeing map at 00E61AA0.
+[Fri Jul 19 12:59:03 2024].202000 CGI Request 1 on process 12916
+[Fri Jul 19 12:59:03 2024].202000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].202000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].247000 msDrawMap(): Layer 0 (aoi), 0.045s
+[Fri Jul 19 12:59:03 2024].289000 msDrawMap(): Layer 1 (aoi_border), 0.042s
+[Fri Jul 19 12:59:03 2024].289000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].289000 msDrawMap() total time: 0.087s
+[Fri Jul 19 12:59:03 2024].290000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].290000 mapserv request processing time (msLoadMap not incl.): 0.088s
+[Fri Jul 19 12:59:03 2024].290000 msFreeMap(): freeing map at 00DC64B0.
+[Fri Jul 19 12:59:03 2024].203000 CGI Request 1 on process 9324
+[Fri Jul 19 12:59:03 2024].204000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].204000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].248000 msDrawMap(): Layer 0 (aoi), 0.044s
+[Fri Jul 19 12:59:03 2024].290000 msDrawMap(): Layer 1 (aoi_border), 0.042s
+[Fri Jul 19 12:59:03 2024].290000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].290000 msDrawMap() total time: 0.087s
+[Fri Jul 19 12:59:03 2024].292000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:03 2024].292000 mapserv request processing time (msLoadMap not incl.): 0.089s
+[Fri Jul 19 12:59:03 2024].292000 msFreeMap(): freeing map at 0158F6F0.
+[Fri Jul 19 12:59:03 2024].215000 CGI Request 1 on process 1916
+[Fri Jul 19 12:59:03 2024].215000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].215000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].261000 msDrawMap(): Layer 0 (aoi), 0.046s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap(): Layer 1 (aoi_border), 0.038s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap() total time: 0.084s
+[Fri Jul 19 12:59:03 2024].300000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].300000 mapserv request processing time (msLoadMap not incl.): 0.085s
+[Fri Jul 19 12:59:03 2024].300000 msFreeMap(): freeing map at 008F0000.
+[Fri Jul 19 12:59:03 2024].213000 CGI Request 1 on process 16352
+[Fri Jul 19 12:59:03 2024].214000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].214000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].260000 msDrawMap(): Layer 0 (aoi), 0.046s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap(): Layer 1 (aoi_border), 0.039s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].299000 msDrawMap() total time: 0.086s
+[Fri Jul 19 12:59:03 2024].300000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].300000 mapserv request processing time (msLoadMap not incl.): 0.087s
+[Fri Jul 19 12:59:03 2024].300000 msFreeMap(): freeing map at 00BB2E00.
+[Fri Jul 19 12:59:03 2024].370000 CGI Request 1 on process 14104
+[Fri Jul 19 12:59:03 2024].370000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].370000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].406000 msDrawMap(): Layer 0 (aoi), 0.036s
+[Fri Jul 19 12:59:03 2024].436000 msDrawMap(): Layer 1 (aoi_border), 0.030s
+[Fri Jul 19 12:59:03 2024].436000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].436000 msDrawMap() total time: 0.066s
+[Fri Jul 19 12:59:03 2024].437000 msSaveImage(stdout) total time: 0.001s
+[Fri Jul 19 12:59:03 2024].437000 mapserv request processing time (msLoadMap not incl.): 0.067s
+[Fri Jul 19 12:59:03 2024].437000 msFreeMap(): freeing map at 00FAFCB0.
+[Fri Jul 19 12:59:03 2024].369000 CGI Request 1 on process 15296
+[Fri Jul 19 12:59:03 2024].369000 msDrawMap(): rendering using outputformat named png (AGG/PNG).
+[Fri Jul 19 12:59:03 2024].369000 msDrawMap(): WMS/WFS set-up and query, 0.000s
+[Fri Jul 19 12:59:03 2024].511000 msDrawMap(): Layer 0 (aoi), 0.142s
+[Fri Jul 19 12:59:03 2024].543000 msDrawMap(): Layer 1 (aoi_border), 0.032s
+[Fri Jul 19 12:59:03 2024].543000 msDrawMap(): Drawing Label Cache, 0.000s
+[Fri Jul 19 12:59:03 2024].543000 msDrawMap() total time: 0.174s
+[Fri Jul 19 12:59:03 2024].545000 msSaveImage(stdout) total time: 0.002s
+[Fri Jul 19 12:59:03 2024].545000 mapserv request processing time (msLoadMap not incl.): 0.176s
+[Fri Jul 19 12:59:03 2024].545000 msFreeMap(): freeing map at 009348C8.
