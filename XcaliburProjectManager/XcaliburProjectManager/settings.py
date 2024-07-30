@@ -126,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
@@ -142,6 +142,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GDAL_LIBRARY_PATH = r'D:\\OSGeo4W\\bin\\gdal308.dll'
-GDAL_DATA = r'C:\\Program Files\\PostgreSQL\\16\\gdal-data'
-GEOS_LIBRARY_PATH=r'D:\\OSGeo4W\\bin\\geos_c.dll'
+#GDAL_LIBRARY_PATH = r'D:\\OSGeo4W\\bin\\gdal308.dll'
+#GDAL_DATA = r'C:\\Program Files\\PostgreSQL\\16\\gdal-data'
+#GEOS_LIBRARY_PATH=r'D:\\OSGeo4W\\bin\\geos_c.dll'

@@ -27,6 +27,8 @@
 {% endblock %}
 
 {% block scripts %}
+{% load static %}
+
     <script>
         // Initialize the OpenLayers map
         const baseLayer = new ol.layer.Tile({
@@ -37,7 +39,7 @@
 
         const aoiLayer = new ol.layer.Tile({
             source: new ol.source.TileWMS({
-                url: 'http://localhost:8080/cgi-bin/mapserv.exe?map=C:\\Users\\DanielFrutos\\PycharmProjects\\Xcalibur\ Project\ Manager\\XcaliburProjectManager\\static\\maps\\main.map',
+                url: '{% static "maps/main.map" %}',
                 params: {
                     'LAYERS': 'aoi',
                     'TILED': true,
