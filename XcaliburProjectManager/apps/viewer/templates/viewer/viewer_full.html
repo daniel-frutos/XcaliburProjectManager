@@ -39,7 +39,8 @@
 
         const aoiLayer = new ol.layer.Tile({
             source: new ol.source.TileWMS({
-                url: '{% static "maps/main.map" %}',
+                //url: '{% static "maps/main.map" %}',
+                url: 'http://localhost:80/cgi-bin/mapserv.exe?map=C:\\Users\\xcalibur\\PycharmProjects\\XcaliburProjectManager\\XcaliburProjectManager\\static\\maps\\main.map',
                 params: {
                     'LAYERS': 'aoi',
                     'TILED': true,

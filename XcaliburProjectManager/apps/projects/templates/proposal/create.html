@@ -198,73 +198,73 @@
 						   		    <ul style="list-style-type:none;">
 									    <div class="form-row">
 									    	<li>
-										        <div class="form-group col-md-4 mb-0">
-										        	{{form.standard_grav | as_crispy_field }}
+										        <div class="form-group col-md-12 mb-0">
+										        	{{form.gst | as_crispy_field }}
+										        </div>
+											</li>
+										</div>
+									    <div class="form-row">
+											<li>
+												 <div class="form-group col-md-12 mb-0">
+										        	{{form.tempest | as_crispy_field }}
 										        </div>
 									        </li>
-									        <div class="form-group col-md-4 mb-0">
-									        	{{form.standard_grav_ls | as_crispy_field }}
-									        </div>
 									    </div>
 									    <div class="form-row">
 									    	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.ftg_grav | as_crispy_field }}
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.fmagrad | as_crispy_field }}
 										       	</div>
+											</li>
+										</div>
+									    <div class="form-row">
+											<li>
+												 <div class="form-group col-md-12 mb-0">
+										        	{{form.helitem | as_crispy_field }}
+										        </div>
 									       	</li>
-									       	<div class="form-group col-md-4 mb-0">
-									        	{{form.ftg_grav_ls | as_crispy_field }}
-									        </div>
 									    </div>
 									    <div class="form-row">
 									      	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.magnetometry | as_crispy_field }}
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.hmagrad | as_crispy_field }}
 										       	</div>
+											</li>
+										</div>
+									    <div class="form-row">
+											<li>
+												 <div class="form-group col-md-12 mb-0">
+										        	{{form.proc_magrad | as_crispy_field }}
+										        </div>
 									       	</li>
-									      	<div class="form-group col-md-4 mb-0">
-									       		{{form.magnetometry_ls | as_crispy_field }}
-									       	</div>
 									    </div>
 									    <div class="form-row">
 									      	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.mag_grad | as_crispy_field }}
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.midas | as_crispy_field }}
 										       	</div>
 									       	</li>
-									      	<div class="form-group col-md-4 mb-0">
-									       		{{form.mag_grad_ls | as_crispy_field }}
-									       	</div>
+										</div>
+									    <div class="form-row">
+									      	<li>
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.asg | as_crispy_field }}
+										       	</div>
+									       	</li>
 									    </div>
 									    <div class="form-row">
 									      	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.spectrometry | as_crispy_field }}
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.fagg | as_crispy_field }}
 										       	</div>
 									       	</li>
-									      	<div class="form-group col-md-4 mb-0">
-									       		{{form.spectrometry_ls | as_crispy_field }}
-									       	</div>
-									    </div>
+										</div>
 									    <div class="form-row">
 									      	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.hem | as_crispy_field }}
+										      	<div class="form-group col-md-12 mb-0">
+										       		{{form.hagg | as_crispy_field }}
 										       	</div>
 									       	</li>
-										    <div class="form-group col-md-4 mb-0">
-									       		{{form.hem_ls | as_crispy_field }}
-									       	</div>
-									    </div>
-									    <div class="form-row">
-									      	<li>
-										      	<div class="form-group col-md-4 mb-0">
-										       		{{form.ftem | as_crispy_field }}
-										       	</div>
-									       	</li>
-									      	<div class="form-group col-md-4 mb-0">
-									       		{{form.ftem_ls | as_crispy_field }}
-									       	</div>
 									    </div>
 									    <div class="form-row">
 									      	<li>
@@ -278,19 +278,42 @@
 									    </div>
 									</ul>
 								</section>
+
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingSix">
+							<h2 class="mb-0">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><p class="h4 mb-1 text-left">
+				          		Business Units
+				          		</p>
+				       			</button>
+				      		</h2>
+						</div>
+						<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionform">
+							<div class="card-body">
+								<section>
+									{% for unit in business_units %}
+										<div class="form-group col-md-12 mb-0">
+											<input type="checkbox" name="business_unit_{{ unit.id }}" id="business_unit_{{ unit.id }}">
+											<label for="business_unit_{{ unit.id }}">{{ unit.bu_name }}</label>
+										</div>
+									{% endfor %}
+								</section>
 							</div>
 						</div>
 					</div>
  					<div class="card">
-				    	<div class="card-header" id="headingSix">
+				    	<div class="card-header" id="headingSeven">
 				      		<h2 class="mb-0">
-				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><p class="h4 mb-1 text-left">
+				       			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSix"><p class="h4 mb-1 text-left">
 				          		Area
 				          		</p>
 				       			</button>
 				      		</h2>
 				    	</div>
-				    	<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionform">
+				    	<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionform">
 					      	<div class="card-body">
 					   			<!--<div class="form-row">
 					   				<div class="form-group col-md-12 mb-0">
@@ -404,57 +427,10 @@
 
 
 	{%block js%}
-	<script type="text/javascript">
-		function check_standard_grav() {
-		   document.getElementById('id_standard_grav_ls').disabled = 
-		                   !document.getElementById('id_standard_grav').checked;
-		}
-	</script>
 
-	<script type="text/javascript">
-		function check_ftg_grav() {
-		   document.getElementById('id_ftg_grav_ls').disabled = 
-		                   !document.getElementById('id_ftg_grav').checked;
-		}
-	</script>
-
-	<script type="text/javascript">
-		function check_magnetometry() {
-		   document.getElementById('id_magnetometry_ls').disabled = 
-		                   !document.getElementById('id_magnetometry').checked;
-		}
-	</script>
-
-	<script type="text/javascript">
-		function check_mag_grad() {
-		   document.getElementById('id_mag_grad_ls').disabled = 
-		                   !document.getElementById('id_mag_grad').checked;
-		}
-	</script>
-
-	<script type="text/javascript">
-		function check_spectrometry() {
-		   document.getElementById('id_spectrometry_ls').disabled = 
-		                   !document.getElementById('id_spectrometry').checked;
-		}
-	</script>
-
-	<script type="text/javascript">
-		function check_hem() {
-		   document.getElementById('id_hem_ls').disabled = 
-		                   !document.getElementById('id_hem').checked;
-		}
-	</script>
-
-	<script type="text/javascript">
-		function check_ftem() {
-		   document.getElementById('id_ftem_ls').disabled = 
-		                   !document.getElementById('id_ftem').checked;
-		}
-	</script>
 	<script type="text/javascript">
 		function check_others() {
-		   document.getElementById('id_others_desc').disabled = 
+		   document.getElementById('id_others_desc').disabled =
 		                   !document.getElementById('id_others').checked;
 		}
 	</script>
@@ -547,6 +523,3 @@
     </script>
 
 {% endblock %}
-
- 	
-

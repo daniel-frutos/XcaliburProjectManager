@@ -36,6 +36,22 @@ class Client(models.Model):
         return self.client_name
 
 
+class BusinessUnit(models.Model):
+    bu_code = models.IntegerField(unique=True, blank=True, null=True)
+    bu_name = models.CharField(max_length=150, unique=True, blank=True, null=True)
+
+    def __str__(self):
+        return self.bu_name
+
+
+class Department(models.Model):
+    dep_code = models.IntegerField(unique=True, blank=True, null=True)
+    dep_name = models.CharField(max_length=150, unique=True, blank=True, null=True)
+
+    def __str__(self):
+        return self.dep_name
+
+
 class Proposal(models.Model):
     status_choices = (
         ('proposal', 'Proposal'),
@@ -59,9 +75,9 @@ class Proposal(models.Model):
 
 
     # general info
-    title = models.CharField(max_length=100, unique=True)
-    reference = models.CharField(max_length=10, unique=True, blank=True, null=True)
-    external_reference = models.CharField(max_length=50, unique=True, blank=True, null=True)
+    title = models.CharField(max_length=100, unique=False)
+    reference = models.CharField(max_length=10, unique=False, blank=True, null=True)
+    external_reference = models.CharField(max_length=50, unique=False, blank=True, null=True)
     description = models.TextField(blank=True)
     country = models.CharField(max_length=50, choices=country_choices, default=None)
     color = models.CharField(max_length=15, unique=False, blank=True, null=True) #color for the polygon
@@ -84,28 +100,34 @@ class Proposal(models.Model):
                                    verbose_name='Duration in months')
 
     # tech info
-    standard_grav = models.BooleanField(default=None, null=True, blank=True, verbose_name='Standard Gravimetry')
-    ftg_grav = models.BooleanField(default=None, null=True, blank=True, verbose_name='FTG Gravimetry')
-    magnetometry = models.BooleanField(default=None, null=True, blank=True, verbose_name='Magnetometry')
-    mag_grad = models.BooleanField(default=None, null=True, blank=True, verbose_name='Magnetic Grandient')
-    spectrometry = models.BooleanField(default=None, null=True, blank=True, verbose_name='Spectrometry')
-    hem = models.BooleanField(default=None, blank=True, null=True, verbose_name='HEM')
-    ftem = models.BooleanField(default=None, blank=True, null=True, verbose_name='FTEM')
+    gst = models.BooleanField(default=None, null=True, blank=True, verbose_name='Geospatial Technologies')
+    fmagrad = models.BooleanField(default=None, null=True, blank=True, verbose_name='Airborne Magnetics & Radiometrics')
+    hmagrad = models.BooleanField(default=None, null=True, blank=True, verbose_name='Helicopter Magnetics & Radiometrics')
+    midas = models.BooleanField(default=None, null=True, blank=True, verbose_name='Helicopter Magnetics Gradient & Radiometrics')
+    asg = models.BooleanField(default=None, null=True, blank=True, verbose_name='Airborne Scalar Gravity')
+    fagg = models.BooleanField(default=None, blank=True, null=True, verbose_name='Airborne Gravity Gradiometer and Magnetic (Falcon)')
+    hagg = models.BooleanField(default=None, blank=True, null=True, verbose_name='Helicopter Gravity Gradiometer and Magnetic (Falcon)')
+    tempest = models.BooleanField(default=None, blank=True, null=True,
+                               verbose_name='Airborne Time Domain Electromagnetic and Magnetic')
+    helitem = models.BooleanField(default=None, blank=True, null=True,
+                               verbose_name='Helicopter Time Domain Electromagnetic and Magnetic')
+    proc_magrad = models.BooleanField(default=None, blank=True, null=True,
+                               verbose_name='Magnetic and Radiometric Processing')
     others = models.BooleanField(default=None, blank=True, null=True, verbose_name='FTEM')
-    standard_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                                        validators=[validate_comma_separated_integer_list])
-    ftg_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                                   validators=[validate_comma_separated_integer_list])
-    magnetometry_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                                       validators=[validate_comma_separated_integer_list])
-    mag_grad_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                                   validators=[validate_comma_separated_integer_list])
-    spectrometry_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                                       validators=[validate_comma_separated_integer_list])
-    hem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                              validators=[validate_comma_separated_integer_list])
-    ftem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                               validators=[validate_comma_separated_integer_list])
+    #standard_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                                   validators=[validate_comma_separated_integer_list])
+    #ftg_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                              validators=[validate_comma_separated_integer_list])
+    #magnetometry_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                                  validators=[validate_comma_separated_integer_list])
+    #mag_grad_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                             validators=[validate_comma_separated_integer_list])
+    #spectrometry_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                                  validators=[validate_comma_separated_integer_list])
+    #hem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+     #                         validators=[validate_comma_separated_integer_list])
+    #ftem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+      #                         validators=[validate_comma_separated_integer_list])
     others_desc = models.CharField(max_length=150, default=None, blank=True, null=True)
 
     # area = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name='Area in km^2')
@@ -170,9 +192,9 @@ class Project(models.Model):
         return path
 
     # general info
-    title = models.CharField(max_length=100, unique=True)
-    reference = models.CharField(max_length=10, unique=True, blank=True, null=True)
-    external_reference = models.CharField(max_length=50, unique=True, blank=True, null=True)
+    title = models.CharField(max_length=100, unique=False)
+    reference = models.CharField(max_length=10, unique=False, blank=True, null=True)
+    external_reference = models.CharField(max_length=50, unique=False, blank=True, null=True)
     description = models.TextField(blank=True)
     country = models.CharField(max_length=50, choices=country_choices)
 
@@ -193,15 +215,25 @@ class Project(models.Model):
                                    verbose_name='Duration in months')
 
     # tech info
-    standard_grav = models.BooleanField(default=None, null=True, blank=True, verbose_name='Standard Gravimetry')
-    ftg_grav = models.BooleanField(default=None, null=True, blank=True, verbose_name='FTG Gravimetry')
-    magnetometry = models.BooleanField(default=None, null=True, blank=True, verbose_name='Magnetometry')
-    mag_grad = models.BooleanField(default=None, null=True, blank=True, verbose_name='Magnetic Grandient')
-    spectrometry = models.BooleanField(default=None, null=True, blank=True, verbose_name='Spectrometry')
-    hem = models.BooleanField(default=None, blank=True, null=True, verbose_name='HEM')
-    ftem = models.BooleanField(default=None, blank=True, null=True, verbose_name='FTEM')
+    gst = models.BooleanField(default=None, null=True, blank=True, verbose_name='Geospatial Technologies')
+    fmagrad = models.BooleanField(default=None, null=True, blank=True, verbose_name='Airborne Magnetics & Radiometrics')
+    hmagrad = models.BooleanField(default=None, null=True, blank=True,
+                                  verbose_name='Helicopter Magnetics & Radiometrics')
+    midas = models.BooleanField(default=None, null=True, blank=True,
+                                verbose_name='Helicopter Magnetics Gradient & Radiometrics')
+    asg = models.BooleanField(default=None, null=True, blank=True, verbose_name='Airborne Scalar Gravity')
+    fagg = models.BooleanField(default=None, blank=True, null=True,
+                               verbose_name='Airborne Gravity Gradiometer and Magnetic (Falcon)')
+    hagg = models.BooleanField(default=None, blank=True, null=True,
+                               verbose_name='Helicopter Gravity Gradiometer and Magnetic (Falcon)')
+    tempest = models.BooleanField(default=None, blank=True, null=True,
+                                  verbose_name='Airborne Time Domain Electromagnetic and Magnetic')
+    helitem = models.BooleanField(default=None, blank=True, null=True,
+                                  verbose_name='Helicopter Time Domain Electromagnetic and Magnetic')
+    proc_magrad = models.BooleanField(default=None, blank=True, null=True,
+                                      verbose_name='Magnetic and Radiometric Processing')
     others = models.BooleanField(default=None, blank=True, null=True, verbose_name='FTEM')
-    standard_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
+    """standard_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
                                         validators=[validate_comma_separated_integer_list])
     ftg_grav_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
                                    validators=[validate_comma_separated_integer_list])
@@ -214,7 +246,7 @@ class Project(models.Model):
     hem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
                               validators=[validate_comma_separated_integer_list])
     ftem_ls = models.CharField(max_length=30, default=None, blank=True, null=True,
-                               validators=[validate_comma_separated_integer_list])
+                               validators=[validate_comma_separated_integer_list])"""
     others_desc = models.CharField(max_length=150, default=None, blank=True, null=True)
 
     # area = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name='Area in km^2')
@@ -270,4 +302,3 @@ class Project(models.Model):
             pass
         self.coordinatesdd = fixed_coords
         super(Project, self).save(*args, **kwargs)"""
-
