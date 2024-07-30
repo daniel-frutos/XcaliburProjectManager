@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Proposal, Responsible, Client, Project
+from .models import Proposal, Responsible, Client, Project, BusinessUnit
 from django.db.models import Q
 from .forms import proposalform, responsibleform, clientform, projectform
 from django.core.files import uploadedfile, File
@@ -69,6 +69,7 @@ def extract_geometry_from_kml(kml_file_path):
 
 @login_required
 def proposal_create_view(request):
+    business_units = BusinessUnit.objects.all()
     if request.method == 'POST':
         form = proposalform(request.POST, request.FILES)
         files = request.FILES.getlist('uploads')
@@ -97,12 +98,14 @@ def proposal_create_view(request):
         else:
             context = {
                 'form': form,
+                'business_units': business_units,
             }
             return render(request, 'proposal/create.html', context)
     else:
         form = proposalform()
         context = {
             'form': form,
+            'business_units': business_units,
         }
     return render(request, 'proposal/create.html', context)
 

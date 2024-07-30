@@ -159,7 +159,7 @@ class proposalform(forms.ModelForm):
         label='Others'
     )
 
-    standard_grav_ls = forms.CharField(
+    """standard_grav_ls = forms.CharField(
         required=False,
         label='',
         validators=[validate_comma_separated_integer_list],
@@ -200,7 +200,7 @@ class proposalform(forms.ModelForm):
         label='',
         validators=[validate_comma_separated_integer_list],
         widget=forms.TextInput(attrs={'placeholder': 'LS in meters', 'disabled': True}),
-    )
+    )"""
     others_desc = forms.CharField(
         required=False,
         max_length=150,
