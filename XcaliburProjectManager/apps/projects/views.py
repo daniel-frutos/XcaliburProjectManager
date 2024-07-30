@@ -73,40 +73,40 @@ def proposal_create_view(request):
     if request.method == 'POST':
         form = proposalform(request.POST, request.FILES)
         files = request.FILES.getlist('uploads')
+
         if form.is_valid():
             obj = form.save(commit=False)
-            # path = os.path.join(obj.country, datetime.now().strftime('%Y'),slugify(obj.title))
             files_num = 0
+
             for file in files:
                 temp_file = uploadedfile.TemporaryUploadedFile.temporary_file_path(file)
-                if files_num == (len(files)):
+                if files_num == len(files):
                     break
                 else:
                     files_num += 1
                     obj.uploads.save(file.name, File(open(temp_file, 'rb')))
 
             form.save()
-            # Here is generates the wkt (geometry) from the kml uploaded
+
             if obj.coordinates:
                 obj.geom = extract_geometry_from_kml(obj.coordinates.path).wkt
                 obj.save()
-            #for field in obj._meta.fields:
-            #    print(f"{field.name}: {getattr(obj, field.name)}")  # Print each field value
 
-            messages.success(request, 'Proposal updated successfully!')
+            messages.success(request, 'Proposal created successfully!')
             return redirect('/projects/')
         else:
-            context = {
-                'form': form,
-                'business_units': business_units,
-            }
-            return render(request, 'proposal/create.html', context)
+            # If the form is not valid, add error messages to the context
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
+
     else:
         form = proposalform()
-        context = {
-            'form': form,
-            'business_units': business_units,
-        }
+
+    context = {
+        'form': form,
+        'business_units': business_units,
+    }
     return render(request, 'proposal/create.html', context)
 
 """
@@ -184,8 +184,16 @@ def proposal_update_view(request, id):
                     files_num += 1
                     obj.uploads.save(file.name, File(open(temp_file, 'rb')))
             form.save()
+            if obj.coordinates:
+                obj.geom = extract_geometry_from_kml(obj.coordinates.path).wkt
+                obj.save()
             messages.success(request, 'Proposal updated successfully!')
             return redirect('/projects/')
+        else:
+            # If the form is not valid, add error messages to the context
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
     context = {
         'form': form,
         'modify': 1,
